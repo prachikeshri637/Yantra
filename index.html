@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/img1.jpg" />
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+            <p>Web Developer</p>
+            <h1>Hi, I am Prachi Keshri<br />from India</h1>
+          </div>
+      </div>
+    </div>
+    <div id="#about">
+        <div class="container"></div>
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/img4.jpg" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+              laborum aliquid accusantium tempora dolores aperiam natus tempore
+              accusamus doloribus sequi sit quia ipsa, veritatis facere, fugit
+              laboriosam alias non corrupti!
+            </p>
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+              </div>
+              <div class="tab-contents" id="skills">
+                <ul>
+                  <li><span>UI/UX</span><br />Designing web/App interfaces</li>
+                  <li><span>Web Development</span><br />Web App development</li>
+                  <li>
+                    <span>Machine Learning</span><br />Creating machine learning
+                    models
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-contents active-tab" id="experience">
+                <ul>
+                  <li>
+                    <span>July 2024 - Current</span><br />Core Member of IEEE-WIE
+                  </li>
+                  <li><span>Oct 2024 - Nov 2024</span><br />POC of Switchuation</li>
+                  <li><span>July 2024 - Oct 2024</span><br />Internship</li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="education">
+                <ul>
+                  <li><span>Current</span><br />Btech IT VIT Vellore cgpa: 9.4</li>
+                  <li><span>2022</span><br />Passed 12th grade with 94%</li>
+                  <li><span>2020</span><br />Passed 10th grade with 93%</li>
+                </ul>    
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+          for (let tablink of tablinks) {
+            tablink.classList.remove("active-link");
+          }
+          for (let tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+          }
+          event.currentTarget.classList.add("active-link");
+          document.getElementById(tabname).classList.add("active-tab");
+        }
+      </script>  
+  </body>
+</html>
